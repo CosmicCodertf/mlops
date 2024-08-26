@@ -3,7 +3,7 @@ import pickle
 import pandas as pd
 from sklearn.model_selection import train_test_split 
 
-df = pd.read_csv('casas.csv')
+df = pd.read_csv('treinamento-modelo/casas.csv')
 colunas = ['tamanho', 'ano', 'garagem']
 
 x = df.drop('preco', axis=1)
