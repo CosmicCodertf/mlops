@@ -30,7 +30,7 @@ def after_request(response):
     return response
 
 
-modelo = pickle.load(open('modelo-serializado.sav', 'rb')) # inputando o modelo-serializado construído no arquivo treinamento-do-modelo.py
+modelo = pickle.load(open('apis/modelo-serializado.sav', 'rb')) # inputando o modelo-serializado construído no arquivo treinamento-do-modelo.py
 
 colunas = ['tamanho', 'ano', 'garagem'] # Variáveis analisadas
 
