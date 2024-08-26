@@ -41,7 +41,7 @@ jobs:
         run: |
           source venv/bin/activate
           curl -I http://127.0.0.1:5000/ || exit 1
-          python request.py --tamanho 120 --ano 2001 --garagem 2
+          python apis/request.py --tamanho 120 --ano 2001 --garagem 2
           tail -n1 flask.log | grep 200
           
       - name: Kill server
