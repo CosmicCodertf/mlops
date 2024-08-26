@@ -30,7 +30,7 @@ jobs:
         run: |
           source venv/bin/activate
           python3 treinamento-modelo/treinamento-do-modelo.py
-          sleep 5
+          sleep 15
           ls treinamento-modelo/modelo-serializado1.sav
           rm -fv treinamento-modelo/modelo-serializado1.sav
 
