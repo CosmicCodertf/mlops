@@ -14,4 +14,4 @@ x_train, x_test, y_train, y_test = train_test_split(
 modelo = LinearRegression()
 modelo.fit(x_train, y_train)
 
-pickle.dump(modelo, open('modelo-serializado1.sav', 'wb'))
+pickle.dump(modelo, open('./modelo-serializado1.sav', 'wb'))
