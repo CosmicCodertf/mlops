@@ -4,16 +4,10 @@ from requests.auth import HTTPBasicAuth
 
 url = 'http://127.0.0.1:5000/cotacao-completa/'
 
-
-tamanho = float(tamanho)
-ano = int(ano)
-garagem = int(garagem)
-
-
 dados = {
-	"tamanho":tamanho,
-	"ano":ano,
-	"garagem":garagem
+   "tamanho": float(tamanho), 
+   "ano": int(ano),
+   "garagem": int(garagem)
 }
 
 auth = requests.auth.HTTPBasicAuth('mrrobot', 'robot123')
