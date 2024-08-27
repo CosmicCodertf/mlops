@@ -2,7 +2,7 @@ import requests
 import argparse
 from requests.auth import HTTPBasicAuth
 
-def main(tamanho, ano, garagem):
+def main(tamanho, ano, garagem, username, password):
 
     url = 'http://127.0.0.1:5000/cotacao-completa/'
 
@@ -12,7 +12,7 @@ def main(tamanho, ano, garagem):
    "garagem": int(garagem)
 }
 
-    auth = requests.auth.HTTPBasicAuth('mrrobot', 'robot123')
+    auth = requests.auth.HTTPBasicAuth(username, password)
     response = requests.post(url, json=dados, auth=auth)
 
     valor = response.json()
