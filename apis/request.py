@@ -2,22 +2,22 @@ import requests
 import argparse
 from requests.auth import HTTPBasicAuth
 
-url = 'http://127.0.0.1:5000/cotacao-completa/'
+def main(tamanho, ano, garagem):
 
-dados = {
+    url = 'http://127.0.0.1:5000/cotacao-completa/'
+
+    dados = {
    "tamanho": float(tamanho), 
    "ano": int(ano),
    "garagem": int(garagem)
 }
 
-auth = requests.auth.HTTPBasicAuth('mrrobot', 'robot123')
-response = requests.post(url, json=dados, auth=auth)
+    auth = requests.auth.HTTPBasicAuth('mrrobot', 'robot123')
+    response = requests.post(url, json=dados, auth=auth)
 
-valor = response.json()
+    valor = response.json()
 
-print (response.status_code)
-
-print(valor)
+    print(valor)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Enviar dados para a API Flask.')
