@@ -5,9 +5,9 @@ from requests.auth import HTTPBasicAuth
 url = 'http://127.0.0.1:5000/cotacao-completa/'
 
 
-tamanho = float("Digite o tamanho da casa: ")
-ano = int("Digite o ano de construção: ")
-garagem = int("Digite o número de vagas na garagem: ")
+tamanho = float(tamanho)
+ano = int(ano)
+garagem = int(garagem)
 
 
 dados = {
