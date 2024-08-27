@@ -28,4 +28,4 @@ if __name__ == "__main__":
     parser.add_argument('--password', required=True, help='Senha para autenticação')
 
     args = parser.parse_args()
-    main(args.tamanho, args.ano, args.garagem)
+    main(args.tamanho, args.ano, args.garagem, args.username, args.password)
